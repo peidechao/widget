@@ -1,0 +1,9 @@
+<ul class="ui-tree-ul" ms-for="el in @tree">
+    <li>
+        <input class="ui-checkbox" type="checkbox"/>
+        <a ms-click="@toggle($event,el)">{{el.name}}
+            <small class="glyphicon glyphicon-triangle-right"></small>
+        </a>
+        <div ms-html="@tmpl" ms-visible="el.subtree.length " ></div>
+    </li>
+</ul>

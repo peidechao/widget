@@ -1,0 +1,68 @@
+.ui-tree-input{
+    height: 16px;
+    width: 16px;
+    background-image: none;
+    display: inline-block;
+    background-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border:1px solid #ccc;
+    border-radius: 20%;
+    outline: none !important;
+    position: relative;
+    box-sizing: border-box;
+    margin:0 3px;
+    cursor: pointer;
+}
+.ui-tree-input::before{
+    content: "";
+    height: 25%;
+    left: 20%;
+    width: 0;
+    position: absolute;
+    background-color: #34b93d;
+    display: block;
+    border-radius: 20%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    top: 35%;
+    z-index: 2;
+}
+.ui-tree-input::after{
+    content: "";
+    height: 20%;
+    width: 0;
+    background-color: #34b93d;
+    display: block;
+    border-radius: 20%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    left: 29%;
+    position: absolute;
+    top: 67%;
+    box-shadow: 0 0 0 2px #FFFFFF;
+}
+.ui-tree-input:checked::before{
+    width: 54%;
+    transition: width 0.1s ease 0;
+    -webkit-transition: width 0.1s ease 0;
+}
+.ui-tree-input:checked::after{
+    width: 70%;
+    transition: width 0.1s ease-in 0.1s;
+    -webkit-transition: width 0.1s ease-in 0.1s;
+}
+.ui-tree-input.halfCheck::before{
+    width: 70%;
+    height:70%;
+    top:13%;
+    left: 13%;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    opacity: 0.4;
+}
